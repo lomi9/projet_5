@@ -44,10 +44,10 @@
 		  }
 		}
 		</script>
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="./assets/maugallery.js"></script>
-	<script src="./assets/scripts.js"></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
+	<script src="./assets/maugallery.js" defer></script>
+	<script src="./assets/scripts.js" defer></script>
 	<title> Nina Carducci - photographe</title>
 </head>
 <body>
@@ -59,7 +59,7 @@
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank" alt="lien-instagram" title="suivez-moi sur instagram"><img src="assets/images/instagram.png" alt="instagram"></a></li>
+			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank" alt="lien-instagram" title="suivez-moi sur instagram"><img src="assets/images/instagram.png" alt="instagram" id="instagram"></a></li>
 		</ul>
 	</nav>
 </header>
@@ -74,13 +74,37 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="./assets/images/slider/photographie-homme-marchant.png" class="d-block w-100" alt="photographie-homme-marchant">
+				<img src="./assets/images/slider/photographie-homme-marchant_large.jpg" 
+				srcset="./assets/images/slider/photographie-homme-marchant_small.jpg 650w,
+				./assets/images/slider/photographie-homme-marchant_medium.jpg 1000w,
+				./assets/images/slider/photographie-homme-marchant_large.jpg 1950w
+				"
+				sizes="(max-width: 650px) 100vw,
+				(max-width: 1000px) 100vw,
+				1950px"
+				class="d-block w-100" alt="photographie-homme-marchant">
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/photographie-foule-concert.png" class="d-block w-100" alt="photographie-foule-concert">
+				<img src="./assets/images/slider/photographie-foule-concert_large.jpg"
+				srcset="./assets/images/slider/photographie-foule-concert_small.jpg 650w,
+				./assets/images/slider/photographie-foule-concert_medium.jpg 1000w,
+				./assets/images/slider/photographie-foule-concert_large.jpg 1950w
+				"
+				sizes="(max-width: 650px) 100vw,
+				(max-width: 1000px) 100vw,
+				1950px"
+				class="d-block w-100" alt="photographie-foule-concert">
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/photographie-maries.png" class="d-block w-100" alt="photographie-maries">
+				<img src="./assets/images/slider/photographie-maries_large.jpg" 
+				srcset="./assets/images/slider/photographie-maries_small.jpg 650w,
+				./assets/images/slider/photographie-maries_medium.jpg 1000w,
+				./assets/images/slider/photographie-maries_large.jpg 1950w
+				"
+				sizes="(max-width: 650px) 100vw,
+				(max-width: 1000px) 100vw,
+				1950px"
+				class="d-block w-100" alt="photographie-maries">
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -95,7 +119,14 @@
 </section>
 <section id="about" itemprop="hasPart">
 	<article class="picture left">
-		<img src="./assets/images/nina-carducci-portrait.png" alt="nina-carducci-portrait">
+		<img src="./assets/images/nina_large.png" 
+		srcset="./assets/images/nina_medium.png 400w,
+				./assets/images/nina_large.png 1950w
+				"
+				sizes="(max-width: 650px) 100vw,
+				(max-width: 1000px) 100vw,
+				1950px"
+				alt="nina-carducci-portrait">
 	</article>
 	<article id="about-me" itemprop="description">
 		<h2 class="about-me__title">A propos de moi</h2>
@@ -189,7 +220,7 @@
 			</form>
 		</article>
 		<article class="picture right">
-			<img src="./assets/images/camera.png" alt="camera">
+			<img src="./assets/images/camera.png" alt="camera" id="camera">
 		</article>
 	</div>
 </footer>
